@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+  <link rel="stylesheet" href="./src/styles.css">
+
+  <title>EmerTech</title>
+</head>
+
+<body>
+  <nav class="loader">
+  </nav>
+    <nav class="main__nav">
+      <nav class="logo"><i class='bx bxs-dog bx-tada bx-flip-horizontal' ></i></nav>
+
+      <nav class="home__nav">
+        <div class="profile">
+          <i class='bx bxs-user bx-burst'></i>
+          <div class="profile__content">
+            <li>Log In</li> <!-- Se cambiará por cerrar sesión / Texto "Profile" -->
+            <li>My cart</li> <!-- Mis compras, historial de productos comprados durante la sesión actual -->
+            <li>Log out <i class='bx bx-log-out bx-rotate-180' ></i></li>
+          </div class="">              
+        </div>
+        <div class="itemsHome__nav">
+          <li><span class="increase__FontSize">A</span> <span class="decrease__FontSize">A</span></li>
+          <li class="text__nav home">Home</li>
+          <li class="text__nav products">Products</li>
+          <li class="text__nav contac">More information</li>
+        </div>
+      </nav>
+      <div class="contentCar">
+        <div class="carProducts">
+        </div>
+        <div class="carTotal">
+        </div>
+      </div>
+
+      <div class="icon__nav">
+        <i class='bx bxs-sun bx-tada'></i>
+        <i class='bx bxs-cart-add'><span class="count">0</span></i>
+        <i class='bx bxs-grid-alt bx-flip-horizontal' ></i>
+    </nav>
+
+    <!-- Fin del navMenu -->
+    <nav class="container__products">
+        <h2>All products</h2>
+        <div class="smarthphone products mySwiper swiper">
+          <h2>smartphones</h2>
+          <div class=" smartphonesSwiper swiper-wrapper">
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class=" computer products  mySwiper swiper">
+          <h2>Computo</h2>
+          <div class=" computerSwiper swiper-wrapper">
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="tv products  mySwiper swiper">
+          <h2>Televisión</h2>
+          <div class=" tvSwiper swiper-wrapper">
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+    </nav>
+  </div>
+  <script src="./src/JS/dark.js"></script>
+  <script src="./src/JS/main.mjs" type="module"></script>
+  <script src="./src/JS/burgerMenu.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</body>
+
+</html>
