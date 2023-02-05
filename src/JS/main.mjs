@@ -9,6 +9,7 @@ const products = document.querySelector(".container__products")
 let contenCar = document.querySelector('.carProducts')
 let carTotal = document.querySelector('.carTotal')
 const amountCart = document.querySelector(".count");
+
 var swiper = new Swiper(".mySwiper", {
     navigation: {
         nextEl: ".swiper-button-next",
@@ -22,10 +23,12 @@ var swiper = new Swiper(".mySwiper", {
     rotate: 50,
     stretch: 0,
     depth: 100,
-    modifier: 1,     slideShadows: true,
+    modifier: 1,   
+    slideShadows: true,
     },
+    
     pagination: {     
-    el: ".swiper-pagination",
+    el: ".swiper-pagination" ,
     },
     });
 
@@ -81,7 +84,7 @@ function pritnTotalcart() {
 
     carTotal.innerHTML = `
     <h3> Total a pagar ${sum}</h3>
-    <button class="btn btn__buy">Comprar</button>
+    <button class="btn btn__buy">Buy</button>
     `
 }
 function printCartProducts() {
@@ -90,7 +93,7 @@ function printCartProducts() {
 
     arrayCart.forEach(function({id,category,price,name,image,amount }){
         html += `
-            <div class=" item swiper-slide">
+            <div class=" item swiper-slide" >
                 <h3> ${category}</h3>
                 <h3>${name}</h3>
                 <div class="product__img">
@@ -108,9 +111,9 @@ function printCartProducts() {
                 </div>
             </div>
         `
-        contenCar.innerHTML=html
+    
 })
-
+contenCar.innerHTML=html
 }
 
 function printProducts() {
@@ -119,7 +122,7 @@ function printProducts() {
     let htmlTvs = ''
     phones.forEach(function({id,category,price,name, stock,image }){
         htmlPhone += `
-            <div class=" item swiper-slide">
+            <div class=" item swiper-slide" >
                 <h3> ${category}</h3>
                 <h3>${name}</h3>
                 <div class="product__img">
@@ -131,7 +134,7 @@ function printProducts() {
                 </div>
 
                 <div class="product__options" id="${id}">
-                    <button class="btn btn__add">Comprar</button>
+                    <button class="btn btn__add">Add to Cart</button>
                 </div>
             </div>
         `
@@ -151,7 +154,7 @@ function printProducts() {
             </div>
 
             <div class="product__options" id="${id}">
-                <button class="btn btn__add">Comprar</button>
+                <button class="btn btn__add">Add to Cart</button>
             </div>
         </div>
         `
@@ -171,7 +174,7 @@ function printProducts() {
             </div>
 
             <div class="product__options" id="${id}">
-                <button class="btn btn__add">Comprar</button>
+                <button class="btn btn__add">Add to Cart</button>
             </div>
         </div>
         `
@@ -254,6 +257,8 @@ carTotal.addEventListener('click',function (e) {
         phones = newArray
         objCart = {};
         
+
+
         printProducts()
         printCartProducts()
         printAmountCart()
